@@ -23,6 +23,26 @@ export default function appReducer(state = initialState, action) {
                 data:null
             }
         }
+        case GET_USERS_BY_ID_SUCCESS: {
+            return {
+                ...state,
+                isLoading: false,
+                isCompleted: true,
+                error: false,
+                data: action.payload
+            }
+        }
+        case GET_USERS_BY_ID_FAIL : {
+            return {
+                ...state,
+                isLoading: false,
+                isCompleted: true,
+                error: action.payload,
+                data: null
+            }
+        }
+        default :
+            return state;
         //Complete the rest of the cases
     }
 }

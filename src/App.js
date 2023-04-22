@@ -6,7 +6,6 @@ import store from './store'
 import getUserById from './actions';
 
 export default function App() {
-
   const [data, setData] = useState(null);
   
   store.subscribe(() => {

@@ -2,3 +2,4 @@
 .DS_store
 cypress
 cypress.json
+node_modules
